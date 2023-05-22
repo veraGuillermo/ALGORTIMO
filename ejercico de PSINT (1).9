@@ -1,0 +1,20 @@
+// ejercicio8: dada las horas trabajadas de 5 personas y la tarifa de pago calcular el salario y la sumatoria de todos los salarios.
+Proceso ejercicio8
+	Definir i Como Entero;
+	Definir salario_cada,horas,tarifa,sumatoria_salario,numero_trabajadores Como Entero;
+	i <- 1;
+	sumatoria_salario <- 0;
+	Escribir 'digite el numero de trabajadores:';
+	Leer numero_trabajadores;
+	Escribir 'digite la tarifa:';
+	Leer tarifa;
+	Mientras i<=numero_trabajadores Hacer
+		Escribir i,'.digite el valor de horas trabajadas por este trabajador:';
+		Leer horas;
+		salario_cada <- horas*tarifa;
+		Escribir 'el valor a pagar de este trabajo es:',salario_cada;
+		i <- i+1;
+		sumatoria_salario <- sumatoria_salario+salario_cada;
+	FinMientras
+	Escribir 'el valor total de salarios a pagar es de : ',sumatoria_salario;
+FinProceso

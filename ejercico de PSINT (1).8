@@ -1,0 +1,65 @@
+//ejercicio7: ingresar "N" enteros, visualizar la suma de los numeros pares
+//de la lista, cuantos pares existen y cual es el promedio de los
+//numeros impares
+
+
+Proceso ejercicio7
+	Definir n_elementos,i,num como enteros;
+	Definir suma_pares,conteo_pares Como Entero;
+	Definir suma_impares,conteo_impares Como Entero;
+	Definir promedio_impares como real;
+	
+	escribir "digite la cantidad de elementos a ingresr:";
+	leer n_elementos;
+	
+	i <- 1;
+	suma_pares <- 0;
+	
+	conteo_pares<- 0;
+	
+	suma_impares <-0;
+	
+	conteo_impares <-0;
+	
+	Mientras i<= n_elementos Hacer
+		
+		Escribir  i, "digite un numero:";
+		leer num;
+		
+		si num mod 2=0 Entonces
+			//el num es par
+			
+			//suma interactiva de pares
+			suma_pares<- suma_pares+num;
+			
+			//conteo de pares
+			conteo_pares<- conteo_pares +1;
+		SiNo
+			// el num es impar
+			//suma interativa de impares
+			suma_impares<- suma_impares+ num;
+			//conteo impares
+			conteo_impares<- conteo_impares+1;
+			
+		FinSi
+		
+		i<- i +1;
+	FinMientras
+	
+		si conteo_pares=0 Entonces
+			Escribir "no se han digitado numeros pares";
+		SiNo
+			
+		Escribir "la suma de los numeros pares es:",suma_pares;
+			Escribir "el conteo de los numeros pares es:", conteo_pares;
+		FinSi
+		
+		
+		si conteo_impares=0 Entonces
+			Escribir "no se han digitado numeros";
+		SiNo
+			promedio_impares<- suma_impares/conteo_impares;
+			Escribir " el promedio de impares es :",promedio_impares;
+		FinSi
+	
+FinProceso
